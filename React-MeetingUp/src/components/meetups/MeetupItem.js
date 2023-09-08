@@ -11,11 +11,11 @@ function MeetupItem(props) {
   const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);
 
   function toggleFavoriteStatusHandler() {
-    // 이미 즐겨찾기에 존재하는 경우
+    // 이미 즐겨찾기에 존재하는 경우 -> 즐겨찾기에서 삭제
     if (itemIsFavorite) {
       favoritesCtx.deleteFavorite(props.id);
     }
-    // 즐겨찾기에 없는 경우
+    // 즐겨찾기에 없는 경우 -> 즐겨찾기에 추가
     else {
       favoritesCtx.addFavorite({
         id: props.id,

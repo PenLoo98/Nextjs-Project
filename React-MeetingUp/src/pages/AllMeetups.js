@@ -21,8 +21,8 @@ function AllMeetupsPage() {
         const Meetups = [];
         for(const key in data){
           Meetups.push({
-            id: key,
-            ...data[key] // spread operator data의 모든 키-값 쌍을 배치
+            id: key, // 원소에서 id값은 필수
+            ...data[key] // spread operator로 data의 모든 키-값 쌍을 배치
           })
         }
 
@@ -39,6 +39,7 @@ function AllMeetupsPage() {
     }
   }, []);
 
+  // fetch로 가져온 데이터를 meetups속성으로 MeetupList에 전달
   return (
     <section>
       <h1>All Meetups</h1>

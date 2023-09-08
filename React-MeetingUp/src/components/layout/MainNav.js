@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import classes from "./MainNav.module.css";
 
 function MainNav() {
+  // FavoritesContext를 사용하기 위해 useContext를 사용한다.
   const favoritesCtx = useContext(FavoritesContext);
 
   return (
